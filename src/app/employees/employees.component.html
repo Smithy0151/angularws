@@ -1,0 +1,13 @@
+<p>employees works!</p>
+<div *ngIf="employees.length > 0">
+  <div *ngFor="let emp of employees">
+    <app-employee [employee]="emp"> </app-employee>
+    <button (click)="delete(emp)">Delete</button>
+    <button (click)="edit(emp)">Edit</button>
+  </div>
+  <!-- <app-employee [employee]="employees[0]"></app-employee> -->
+
+</div>
+<div class="container" *ngIf="employees.length <= 0">
+  <h1>No employees yet joined your company!!!</h1>
+</div>
