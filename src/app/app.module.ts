@@ -15,6 +15,11 @@ import { EmpformComponent } from './empform/empform.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ChildComponent } from './lifecycle/child.component';
 import { ServiceComponent } from './service/service.component';
+import { ObservablesComponent } from './observables/observables.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProfiledetailComponent } from './profiledetail/profiledetail.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +35,12 @@ import { ServiceComponent } from './service/service.component';
     LifecycleComponent,
     ChildComponent,
     ServiceComponent,
+    ObservablesComponent,
+    LoginComponent,
+    PagenotfoundComponent,
+    ProfiledetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

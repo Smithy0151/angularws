@@ -1,3 +1,6 @@
-<p>My Profile</p>
-<p>Name: {{ name }}</p>
-<p>Email: {{ email }}</p>
+<div class="container">
+    <p> name : {{employee.ename}}</p>
+    <p> country : {{employee.address.country}}</p>
+    <button (click)="displayAddress()">View Address</button>
+    </div>
+    <router-outlet></router-outlet>
