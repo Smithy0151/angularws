@@ -20,6 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProfiledetailComponent } from './profiledetail/profiledetail.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -40,8 +44,10 @@ import { ProfiledetailComponent } from './profiledetail/profiledetail.component'
     PagenotfoundComponent,
     ProfiledetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [],
+  imports: [BrowserModule,AppRoutingModule, FormsModule, HttpClientModule, MatButtonModule, MatCardModule, MatInputModule],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
